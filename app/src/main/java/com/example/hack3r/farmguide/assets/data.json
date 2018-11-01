@@ -1,0 +1,49 @@
+[
+  {
+    "crop":"tea",
+    "soil": " well drained, light loamy soil",
+    "temperature": "15°-35°c",
+    "rainfall": "100-250cm"
+
+  },
+
+  {
+    "crop":"maize",
+    "soil": "deep-heavy clay to light sandy loam",
+    "temperature": "15°-27°c",
+    "rainfall": "65-125cm"
+
+  },
+
+  {
+    "crop":"rice",
+    "soil": "Loose soil either loamy or sandy",
+    "temperature": "16° -18°c",
+    "rainfall": "900mm of water per 140 days"
+
+  },
+
+  {
+    "crop":"pyrethrum",
+    "soil": "",
+    "temperature": "",
+    "rainfall": ""
+
+  },
+
+  {
+    "crop":"",
+    "soil": "",
+    "temperature": "",
+    "rainfall": ""
+
+  },
+
+  {
+    "crop":"",
+    "soil": "",
+    "temperature": "",
+    "rainfall": ""
+
+  }
+]

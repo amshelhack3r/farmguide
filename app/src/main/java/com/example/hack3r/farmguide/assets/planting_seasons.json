@@ -1,0 +1,147 @@
+[
+  {
+    "month": 1,
+    "intro":"January is a great time to start planning what vegetable varieties will be grown in the garden.",
+    "variant": [
+      {
+        "title": "ONIONS",
+        "info":"Late January is a great time to start your onion seeds indoors if you live in a warmer gardening zone (6-10) For zones 1-5 start your onion seeds in mid-late February"
+      },{
+        "title": "HERBS",
+        "info":"Herbs are defiantly the most popular indoor plant to grow throughout the winter months"
+      }
+    ]
+  },{
+    "month": 2,
+    "intro":"Get your garden planning started. In some warmer locations you can begin sowing your vegetable seeds outdoors.",
+    "variant": [
+      {
+        "title": "BROCCOLI",
+        "info":"If you live in a warmer climate and can find a quick growing Broccoli variety you can harvest until it bolts in the hot summer sun!"
+      },{
+        "title": "LETTUCE",
+        "info":"Start a crop of salad mix greens that gets bright sun but not all day. "
+      }
+    ]
+  },{
+    "month": 3,
+    "intro":"March is the perfect time to get those tomato and pepper seeds started indoors ready for an early spring planting!",
+    "variant": [
+      {
+        "title": "BEETS",
+        "info":"Sow beets now for a fast, early summer treat"
+      },{
+        "title": "CABBAGE",
+        "info":"Cabbage is one of the easier plants to grow in the garden. Select a variety that is right for your location (size and maturity length)."
+      }
+    ]
+  },{
+    "month": 4,
+    "intro":"Yes, Yes, Yes! April is finally here and your garden soil is finally warming up.",
+    "variant": [
+      {
+        "title": "BEANS",
+        "info":"Start planting both bush and pole beans now that the soil and air are warmed up."
+      },{
+        "title": "CARROTS",
+        "info":"Planting carrots by April will give an early summer crop."
+      }
+    ]
+  },{
+    "month": 5,
+    "intro":"Finally warm temperatures are here to stay and you don’t have to worry about that frost. ",
+    "variant": [
+      {
+        "title": "CORN",
+        "info":"One of the most rewarding and fast growing crops to grow. "
+      },{
+        "title": "CUCUMBERS",
+        "info":"Fast growing vine or bush cucumber plants can produce an abundance of cucumber fruits."
+      }
+    ]
+  },{
+    "month": 6,
+    "intro":"Most fruiting plants like tomatoes, peppers, and eggplants should already be in the ground.",
+    "variant": [
+      {
+        "title": "HERBS",
+        "info":"Plant heat loving herbs like basil, oregano, thyme and sage."
+      },{
+        "title": "MELONS",
+        "info":"Melons are some of the most rewarding plants to grow. Great for hot, long summers."
+      }
+    ]
+  },{
+    "month": 7,
+    "intro":"There are still some great crops that can be planted that will keep your garden pumping",
+    "variant": [
+      {
+        "title": "BROCCOLI",
+        "info":"Broccoli can be planted in the fall to produce a crop well into November."
+      },{
+        "title": "CARROTS",
+        "info":"Planting carrots by mid-July yields a fall crop that will keep in the garden until used."
+      }
+    ]
+  },{
+    "month": 8,
+    "intro":"August is an ideal time to plant seeds for a second gardening season ",
+    "variant": [
+      {
+        "title": "BEANS",
+        "info":"Start planting both bush and pole beans now that the soil and air are warmed up. "
+      },{
+        "title": "COVER CROPS",
+        "info":"A great way to add nutrients to your soil for the following year is by growing winter cover crops this fall. "
+      }
+    ]
+  },{
+    "month": 9,
+    "intro":"Although September marks the beginning of fall, there are still a few fast growing vegetables that can be planted this month ",
+    "variant": [
+      {
+        "title": "BLUEBERRIES",
+        "info":"Fall is the perfect time to plant blueberry plants. "
+      },{
+        "title": "GARLIC",
+        "info":"Garlic is a vegetable that can be planted in the fall for a larger and earlier harvest this coming spring."
+      }
+    ]
+  },{
+    "month": 10,
+    "intro":"Fall is here and many vegetables don’t have enough time to develop before your first frost.",
+    "variant": [
+      {
+        "title": "FLOWER BULBS",
+        "info":"October is a great time to plant those fall flower bulbs. "
+      },{
+        "title": "HERBS",
+        "info":"Herbs are defiantly the most popular indoor plant to grow throughout the winter months. "
+      }
+    ]
+  },{
+    "month": 11,
+    "intro":"Don’t be sad, you can still grow a lot of different plants inside.",
+    "variant": [
+      {
+        "title": "SPROUTS",
+        "info":"Growing sprouts indoors is fun, quick and a great way to spruce up salads and sandwiches. "
+      },{
+        "title": "INDOOR PLANTS",
+        "info":"Growing flowers indoors can be a good way to pass the winter months. Try growing an indoor Amaryllis flower kit."
+      }
+    ]
+  },{
+    "month": 12,
+    "intro":"It’s time for the garden seed catalogs to arrive! Start planning your garden wherever you live. ",
+    "variant": [
+      {
+        "title": "HERBS",
+        "info":"Herbs are defiantly the most popular indoor plant to grow throughout the winter months. "
+      },{
+        "title": "VEGETABLES",
+        "info":"If you live in some warmer climates it is a perfect time to plant vegetables."
+      }
+    ]
+  },
+]
