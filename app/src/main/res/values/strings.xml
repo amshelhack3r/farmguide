@@ -7,6 +7,23 @@
     <string name="calculate_desc">
         Here We calculate the seedlings to plant. \n
         This depends on the size of land and the expected output \n
-        The formula is
     </string>
+    <string name="calculate_res_bak">
+        Convert Acres into inches: 1 acre = 6.273e+6 inches\n
+        3 acres = 1.882e+7 inches\n
+        Seedling spacing 6*6\n
+        Formula 1.882e+7 / 36\n
+        Total Seedlings is 522720\n
+    </string>
+    <string name="calculate_res">
+        Convert Acres into inches: 1 acre = 6.273e+6 inches\n
+    </string>
+    <string name="title_activity_drawer">drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
 </resources>

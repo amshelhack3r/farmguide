@@ -19,31 +19,31 @@
     "crop":"rice",
     "soil": "Loose soil either loamy or sandy",
     "temperature": "16° -18°c",
-    "rainfall": "900mm of water per 140 days"
+    "rainfall": "900mm of rainfall"
 
   },
 
   {
     "crop":"pyrethrum",
-    "soil": "",
-    "temperature": "",
-    "rainfall": ""
+    "soil": "deep and well drained volcanic soils",
+    "temperature": "cool temperatures",
+    "rainfall": "750mm of rainfall"
 
   },
 
   {
-    "crop":"",
-    "soil": "",
-    "temperature": "",
-    "rainfall": ""
+    "crop":"bean",
+    "soil": "bean crop thrives in a well-drained soil which is rich in organic matter",
+    "temperature": "15° -33°c",
+    "rainfall": " 800-2000mm of rainfall"
 
   },
 
   {
-    "crop":"",
-    "soil": "",
-    "temperature": "",
-    "rainfall": ""
+    "crop":"green grams",
+    "soil": "thrive in a well-drained soil",
+    "temperature": "28° -30°c",
+    "rainfall": "350-650mm"
 
   }
 ]
