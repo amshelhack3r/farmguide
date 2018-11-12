@@ -160,14 +160,7 @@ public class MainFragment extends Fragment{
 
     //show notifications on the notification bar
     public void systemNotification(){
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getContext())
-                .setSmallIcon(R.drawable.logo)
-                .setContentTitle("PLANT PLANT NOW")
-                .setContentText("Get into the app to know more")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getContext());
-        managerCompat.notify(1, mBuilder.build());
     }
 
     //Get the current month number
