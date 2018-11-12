@@ -1,27 +1,19 @@
 package com.example.hack3r.farmguide;
 
-import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.DatePicker;
-import android.widget.TextView;
 
 import com.example.hack3r.farmguide.fragments.CalculateFragment;
 import com.example.hack3r.farmguide.fragments.CropInfo;
-import com.example.hack3r.farmguide.fragments.DatePickerFragment;
 import com.example.hack3r.farmguide.fragments.MainFragment;
-
-import org.json.JSONArray;
 
 public class MainActivity extends AppCompatActivity{
     AppBarLayout appBarLayout;
@@ -37,7 +29,7 @@ public class MainActivity extends AppCompatActivity{
         mainFragment = new MainFragment();
         loadFragment(mainFragment);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
     }
