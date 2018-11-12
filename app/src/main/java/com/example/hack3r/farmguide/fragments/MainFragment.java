@@ -3,7 +3,9 @@ package com.example.hack3r.farmguide.fragments;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +13,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -41,18 +44,21 @@ import org.json.JSONObject;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
-public class MainFragment extends Fragment implements DatePickerDialog.OnDateSetListener{
+public class MainFragment extends Fragment{
 
     Context c;
     TextView period, month_heading, month_info, variant1, variant2, variant1_info, variant2_info;
     ImageView variant1_image, variant2_image;
     Button change_period;
     public final String TAG = MainActivity.class.getSimpleName();
+    ProgressDialog progressDialog;
     public final String url = "http://mutall.co.ke/sam_json/planting_seasons.json";
     String[] MONTHS = {
             "JANUARY",
@@ -86,46 +92,26 @@ public class MainFragment extends Fragment implements DatePickerDialog.OnDateSet
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
         period.setText(dateFormat.format(date));
-        getJsonFromServer(url);
-        TextWatcher watcher = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                getJsonFromServer(url);
-            }
-        };
-        period.addTextChangedListener(watcher);
-
+        getJsonFromServer(url, getMonthNum());
         change_period.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.support.v4.app.DialogFragment datePickerDialog = new DatePickerFragment();
-                ((DatePickerFragment) datePickerDialog).setListener(MainFragment.this);
-                datePickerDialog.show(getChildFragmentManager(), "date picker");
+                showDialog();
                 }
         });
         return view;
     }
 
     //get information from the internet
-    public void getJsonFromServer(String url) {
+    public void getJsonFromServer(String url, final int Month) {
+       showProgress("Please Wait");
         //Make a new Json ArrayRequest from server
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                int month_num = getMonthNum();
                 try {
-                    JSONObject object = response.getJSONObject(month_num);
-                    String month_name = MONTHS[month_num];
+                    JSONObject object = response.getJSONObject(Month);
+                    String month_name = MONTHS[Month];
                     month_heading.setText(month_name);
                     String intro = object.getString("intro");
                     month_info.setText(intro);
@@ -152,12 +138,15 @@ public class MainFragment extends Fragment implements DatePickerDialog.OnDateSet
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
+
+                dismissProgress();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, error.getMessage());
                 showToast(error.getMessage());
+                dismissProgress();
             }
         });
 
@@ -166,7 +155,7 @@ public class MainFragment extends Fragment implements DatePickerDialog.OnDateSet
 
     //helper function to show toast notifications
     public void showToast(String message){
-        Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+        Toasty.info(getContext(), message, Toast.LENGTH_LONG).show();
     }
 
     //show notifications on the notification bar
@@ -195,12 +184,29 @@ public class MainFragment extends Fragment implements DatePickerDialog.OnDateSet
         return num;
     }
 
-    @Override
-    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        Toasty.success(getContext(), "fragment called", Toast.LENGTH_LONG).show();
-       //The calender class compiles months as arrays so months run from 0-11
-        int newMonth = month + 1;
-        String myDate = day+"/"+newMonth+"/"+year;
-        period.setText(myDate);
-   }
+    void showDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("SELECT MONTH")
+                .setItems(R.array.MONTHS, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        getJsonFromServer(url, which);
+                    }
+                });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        }
+
+
+    void showProgress(String message){
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage(message);
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+    }
+
+    void dismissProgress(){
+        if(progressDialog.isShowing()){
+            progressDialog.dismiss();
+        }
+    }
 }
