@@ -12,7 +12,6 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:toolbarId="@+id/toolbar"
             android:background="@color/cardview_light_background"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
@@ -38,13 +37,13 @@
 
 
     <android.support.design.widget.BottomNavigationView
+        android:background="@color/md_green_A100"
         android:id="@+id/navigation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
-        android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation" />
 
 </android.support.design.widget.CoordinatorLayout>
